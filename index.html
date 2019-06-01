@@ -1,0 +1,131 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title> Atendimento à Mulher </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/jquery.js"></script>
+
+</head>
+<body>
+
+	<header>
+		<h3>Serviços de Atendimento à Mulher </h3>
+	</header>
+	
+	<div id='fundo'></div>
+
+	<div id="altoContraste">
+		Alto Contaste
+	</div>
+
+	<section>
+
+		<div id="back-page" class="page-control"> << </div>
+
+		<div id="inicio">
+
+				<h2> Seja bem vinda </h2>
+
+				<p> Lorem ipsum venenatis vitae aliquam nisi ligula pretium nullam rhoncus class cubilia, fringilla etiam potenti fusce ultrices conubia torquent libero sollicitudin vel ornare, phasellus iaculis himenaeos leo euismod ut quam pharetra feugiat sodales. mauris dictum non dictum magna augue nunc semper id, ad nibh enim etiam mauris tortor per mauris, iaculis gravida vehicula feugiat duis dictumst in. 
+  				</p>
+
+				<div id="btn-serv"> Serviços </div>
+		</div>
+
+		<div id="servicos" class="modal">
+			<ul>
+				<li id="btn-palestras"> 
+					<img src="img/palestras.png">
+					<p> Informe-se sobre as paletras que estão por vir. </p>
+				</li>
+				<li id="btn-hospitais"> 
+					<img src="img/hospitais.png">
+					<p> Descubra qual o Hospital mais proximo de você </p>
+				</li>
+				<li id="btn-delegacias"> 
+					<img src="img/delegacia.png">
+					<p> Descubra qual a delegacia mais proximo de você </p>
+				</li>
+			</ul>
+		</div>
+
+<!-- ======================================== Serviços =========================================== -->		
+
+		<div id="palestras" class="modal"> 
+
+			<h2> Palestras </h2>
+
+			<iframe src="https://weblistarpalestra.azurewebsites.net/View/ListarPalestraDefault"></iframe>
+
+		</div>
+
+<!-- ============================ -->
+
+		<div id="hospitais" class="modal">
+
+		
+
+				<h2> Encontre os Hospitais especializados mais proximos de você </h2>
+
+				<div id="hospitaisFrame" class="modal">
+
+					<label> Insira aqui seu CEP:</label>
+					<input type="text" name="cep" id="meuCepHospitais"> 
+					<button id="hospConfirm"> Confirmar </button>
+			
+					<ul id="lista-hospitais">	</ul>
+					
+				</div>
+
+		
+			
+		</div>
+
+<!-- ============================ -->
+
+		<div id="delegacias" class="modal">
+
+				<h2> Encontre os Delegacias especializadas mais proximas de você </h2>
+
+				<div id="delegaciasFrame" class="modal">
+
+					<label> Insira aqui seu CEP:</label>
+					<input type="text" name="cep" id="meuCepDelegacias"> 
+					<button id="delegConfirm"> Confirmar </button>
+			
+					<ul id="lista-delegacias">	</ul>
+					
+				</div>
+			
+		</div>
+
+<!-- ============================ -->
+
+	</section>
+
+	<footer>
+		Powered By Triforce
+	</footer>
+
+</body>
+<!--<script src="//code.responsivevoice.org/responsivevoice.js?key=l8WgW0uR"></script> -->
+	
+ <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+
+<script src='js/script.js'></script>
+<script src="js/cepHosp.js"></script>
+<script src='js/acessibilidade.js'></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

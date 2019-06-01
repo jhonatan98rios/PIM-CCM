@@ -1,0 +1,365 @@
+/* ========== Genericos ========== */
+
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+body{
+	width: 100%;
+	height: 600px;
+	background-size: 150%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+ul{
+	list-style: none;
+}
+
+/* ========== Layout ========== */
+
+header{
+	background-image: url('img/1.png');
+	background-size: 100%; 
+	width: 100%;
+	height: 300px;
+	top: 0px;
+	color: #fff;
+	text-align: center;
+	font-size: 40px;
+	transition: all 1s;
+	transition-timing-function: ease-in-out;
+	display:table;
+}
+
+header h3{
+	display: table-cell;
+	vertical-align: middle;
+	
+}
+
+#altoContraste{
+	width: 150px;
+	height: 22px;
+	padding-top: 5px;
+	text-align: center;
+	cursor: pointer;
+	position: fixed;
+	top: 30px;
+	background-color:#000;
+	border: 3px solid #fff;
+	color: #fff;
+	right: 50px;
+	border-radius: 10px;
+	font-weight: bolder;
+	filter: drop-shadow(0px 0px 10px #000);
+}
+
+#fundo{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	bottom: 0px;
+	z-index: -1;
+	background-image: url('img/girls.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: blur(5px);
+}
+
+section{
+	max-width: 1200px;
+	width: 95%;
+	height: 350px;
+	border-radius: 10px;
+	position: relative;
+	margin-top: 30px;
+}
+
+#back-page{
+	width: 50px;
+	height: 40px;
+	background-color: #190751;
+	color: #fff;
+	border-radius: 30px;
+	border: 3px solid #fff;
+	left: 0px;
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
+	display: none;
+	z-index: 99;	
+}
+
+.modal{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.modal ul{
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.modal ul li{
+	background-color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+.modal h2{
+	font-size: 32px;
+}
+
+.modal p{
+	font-size: 24px;
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	padding-top: 10px;
+	margin-top: 10px;
+	bottom: 0px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 5px #000;
+	background-image: url('img/1.png');
+	background-size: 100%;
+	font-size: 20px;
+}
+
+/* ========== Home Screen ========== */
+
+#inicio{
+	height: 100%;
+	text-align: center;
+}
+
+#inicio h2{
+	font-size: 30px;
+	padding-top: 15px;
+	margin-top: -70px;
+	color: #fff;
+	width: 300px;
+	height: 50px;
+	background-image: url('img/roxo.png');
+	background-size: 100%;
+	border: 3px solid #fff;
+	filter: drop-shadow(1px 1px 10px #000);
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+#inicio p{
+	font-size: 20px;
+	width: 800px;
+	margin-top: 40px;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 20px;
+	filter: drop-shadow(1px 1px 10px #000);
+
+}
+
+#inicio #btn-serv{
+	width: 200px;
+	height: 40px;
+	border-radius: 30px;
+	font-size: 30px;
+	color: #fff;
+	padding: 5px;
+	margin-top: 40px;
+	background-image: url('img/roxo.png');
+	background-size: 100%;
+	cursor: pointer;
+	filter: drop-shadow(1px 1px 10px #000);
+	border: 3px solid #fff;
+	border-radius: 30px;
+}
+
+
+/* ========== Serviços ========== */
+
+#servicos{
+	display: none;
+}
+
+#servicos ul li {
+	width: 260px;
+	height: 400px;
+	cursor: pointer;
+	filter: drop-shadow(1px 1px 10px #000);
+	border-radius: 20px;
+	margin: 30px ;
+}
+
+#servicos ul li img{
+	width: 100%;
+}
+
+#servicos ul li p{
+	width: 80%;
+}
+
+/* ========== Palestras ========== */
+
+#palestras{
+	display: none;
+	text-align: center;
+	background-color: #fff;
+	width: 87%;
+	height: 500px;
+	border-radius: 20px;
+	filter: drop-shadow(1px 1px 10px #000);
+}
+
+#palestras h2{
+	padding-top: 0px;
+	margin: 10px auto 20px; 
+}
+
+#palestras p{
+	width: 600px;
+}
+
+#palestras iframe{
+	width: calc(100% - 4px);
+	height: 500px;
+	border: none;
+}
+
+/* ========== Hospitais ========== */
+
+#hospitais{
+	display: none;
+	width: 80%;
+	height: 520px;
+	border-radius: 20px;
+	background-color: #fff;
+	filter: drop-shadow(1px 1px 10px #000);
+}
+
+#hospitais h2{
+	margin-bottom: 30px;
+	width: 80%;
+}
+
+#hospitais label{
+	margin: 10px;
+}
+
+#hospitais input{
+	width: 300px;
+	height: 30px;
+}
+
+#hospitais button{
+	width: 70px;
+	font-size: 12px;
+	font-weight: bolder;
+	height: 30px;
+}
+
+#lista-hospitais{
+	width: 100%;
+	height: 80%;
+	background-color: #fff;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+#lista-hospitais li{
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-radius: 0px;
+	color: #000;
+}
+
+#lista-hospitais li ul{
+	width: 100%;
+	margin: 0px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+#lista-hospitais li ul li{
+	text-align: left;
+	margin-left: 20px;
+	width: 45%;
+	height: auto;
+	border: none;
+	
+	color: #000;
+	font-weight: normal;
+}
+
+/* ========= Delegacias =========== */
+
+#delegacias{
+	display: none;
+	width: 80%;
+	height: 500px;
+	border-radius: 20px;
+	background-color: #fff;
+	filter: drop-shadow(1px 1px 10px #000);
+}
+
+#delegacias iframe{
+	width: calc(100% - 2px);
+	height: 350px;
+	border: 1px solid #ccc;
+}
+
+#delegacias h2{
+	margin-bottom: 30px;
+	width: 80%;
+}
+
+#delegaciasFrame label{
+	margin: 10px;
+}
+
+#delegaciasFrame input{
+	width: 300px;
+	height: 30px;
+}
+
+#delegaciasFrame button{
+	width: 70px;
+	font-size: 12px;
+	font-weight: bolder;
+	height: 30px;
+}
+
+#lista-delegacias{
+	width: 100%;
+	height: 80%;
+	background-color: #fff;
+	margin-top: 20px;
+
+}
+
+#lista-delegacias li{
+	width: 100%;
+	height: 60px;
+	border: 1px solid #000;
+	border-radius: 0px;
+	margin-top: 5px;
+}
+
+/* ========== Serviços ========== */
