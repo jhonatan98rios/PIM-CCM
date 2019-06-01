@@ -11,7 +11,7 @@ var belaVista = {
 	idd : 1,
 	nome : ' Hospital Estadual Pérola Byington',
 	endereco : ' Av. Brigadeiro Luís Antônio, 683 – Bela Vista',
-	telefone : ' (11) 3248-8000 / 3292-9000',
+	telefone : ' (11) 3248-8000',
 	pontos: 0
 }
 
@@ -27,7 +27,7 @@ var limao = {
 	idd : 3,
 	nome : ' Hospital Municipal Dr. Mario de Moraes Altenderfelder Silva',
 	endereco : ' Av. Dep. Emílio Carlos, 3100 – Limão',
-	telefone : ' (11) 3986-1128 / 3986 – 1159',
+	telefone : ' (11) 3986-1128',
 	pontos: 0
 }
 
@@ -68,11 +68,10 @@ function newLine(hospital){
 	let line = 
 		`
 		<ul>
-			<li> <b> Nome do Hospital: </b> ${hospital.nome}</li>
-			<li> <b> Endereço: </b> ${hospital.endereco}</li>
-			<li> <b> Telefone: </b> ${hospital.telefone}</li>
-	                
-        <ul>`	
+			<li> ${hospital.nome}</li>
+			<li> ${hospital.endereco}</li>
+			<li> ${hospital.telefone}</li>
+        </ul>`	
 	;
 
 	let listItem = document.createElement('li');

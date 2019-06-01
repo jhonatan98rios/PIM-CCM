@@ -24,6 +24,13 @@ $(document).ready(function(){
 		}else{
 			$('#servicos').fadeIn();
 			$('#palestras, #hospitais, #delegacias').hide();
+
+			$('#meuCepHospitais').val('');
+			$('.lineHosp').remove();
+
+			$('#meuCepDelegacias').val('');
+			$('.lineDeleg').remove();
+
 			ativa = 'servicos';
 		};
 	};

@@ -197,6 +197,7 @@ footer{
 
 #servicos{
 	display: none;
+	width: 100%;
 }
 
 #servicos ul li {
@@ -266,46 +267,59 @@ footer{
 #hospitais input{
 	width: 300px;
 	height: 30px;
+	font-size: 14px;
 }
 
 #hospitais button{
-	width: 70px;
-	font-size: 12px;
+	width: 80px;
+	font-size: 14px;
 	font-weight: bolder;
-	height: 30px;
+	height: 32px;
+	background-color: #BE7DFF;
+	color: #fff;
+	border: none;
 }
 
 #lista-hospitais{
-	width: 100%;
-	height: 80%;
+	width: 97%;
+	height: 85%;
 	background-color: #fff;
 	margin-top: 20px;
 	font-size: 18px;
+	border: 1px solid #000;
+	border-top: none;
+	overflow-y: scroll;
 }
 
 #lista-hospitais li{
 	width: 100%;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #000;
 	border-radius: 0px;
 	color: #000;
+	padding: 2px;
 }
 
 #lista-hospitais li ul{
 	width: 100%;
+	height: auto;
 	margin: 0px;
-	margin-top: 5px;
 	margin-bottom: 2px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 #lista-hospitais li ul li{
-	text-align: left;
-	margin-left: 20px;
-	width: 45%;
+	text-align: center;
+	margin-left: 10px;
+	width: 80%;
 	height: auto;
 	border: none;
-	
 	color: #000;
 	font-weight: normal;
+	border-right: 1px solid #000;
+
 }
 
 /* ========= Delegacias =========== */
@@ -313,16 +327,10 @@ footer{
 #delegacias{
 	display: none;
 	width: 80%;
-	height: 500px;
+	height: 520px;
 	border-radius: 20px;
 	background-color: #fff;
 	filter: drop-shadow(1px 1px 10px #000);
-}
-
-#delegacias iframe{
-	width: calc(100% - 2px);
-	height: 350px;
-	border: 1px solid #ccc;
 }
 
 #delegacias h2{
@@ -330,36 +338,67 @@ footer{
 	width: 80%;
 }
 
-#delegaciasFrame label{
+#delegaciaslabel{
 	margin: 10px;
 }
 
-#delegaciasFrame input{
+#delegacias input{
 	width: 300px;
 	height: 30px;
+	font-size: 14px;
 }
 
-#delegaciasFrame button{
-	width: 70px;
-	font-size: 12px;
+#delegacias button{
+	width: 80px;
+	font-size: 14px;
 	font-weight: bolder;
-	height: 30px;
+	height: 32px;
+	background-color: #BE7DFF;
+	color: #fff;
+	border: none;
 }
 
 #lista-delegacias{
-	width: 100%;
-	height: 80%;
+	width: 97%;
+	height: 85%;
 	background-color: #fff;
 	margin-top: 20px;
+	font-size: 18px;
+	border: 1px solid #000;
+	border-top: none;
+	overflow-y: scroll;
 
 }
 
 #lista-delegacias li{
 	width: 100%;
-	height: 60px;
-	border: 1px solid #000;
+	border-top: 1px solid #000;
 	border-radius: 0px;
-	margin-top: 5px;
+	color: #000;
+	padding: 2px;
+}
+
+#lista-delegacias li ul{
+	width: 100%;
+	height: auto;
+	margin: 0px;
+	margin-bottom: 2px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#lista-delegacias li ul li{
+	text-align: center;
+	margin-left: 10px;
+	width: 80%;
+	height: auto;
+	border: none;
+	color: #000;
+	font-weight: normal;
+	border-right: 1px solid #000;
+
 }
 
 /* ========== Serviços ========== */

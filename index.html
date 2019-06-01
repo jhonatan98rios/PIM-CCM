@@ -15,7 +15,7 @@
 	<div id='fundo'></div>
 
 	<div id="altoContraste">
-		Alto Contaste
+		Alto Contraste
 	</div>
 
 	<section>
@@ -63,40 +63,48 @@
 
 		<div id="hospitais" class="modal">
 
+			<h2> Encontre os Hospitais especializados mais proximos de você </h2>
+
+			<div id="hospitaisFrame" class="modal">
+
+				<label> INSIRA SEU CEP:</label>
+				<input type="text" name="cep" id="meuCepHospitais"> 
+				<button id="hospConfirm"> Confirmar </button>
 		
-
-				<h2> Encontre os Hospitais especializados mais proximos de você </h2>
-
-				<div id="hospitaisFrame" class="modal">
-
-					<label> Insira aqui seu CEP:</label>
-					<input type="text" name="cep" id="meuCepHospitais"> 
-					<button id="hospConfirm"> Confirmar </button>
-			
-					<ul id="lista-hospitais">	</ul>
-					
-				</div>
-
-		
-			
+				<ul id="lista-hospitais">
+					<li> 
+						<ul> 
+							<li> Nome do Hospital </li> 
+							<li> Endereço </li>
+							<li> Telefone </li>
+						</ul> 
+					</li>
+				</ul>				
+			</div>
 		</div>
 
 <!-- ============================ -->
 
 		<div id="delegacias" class="modal">
 
-				<h2> Encontre os Delegacias especializadas mais proximas de você </h2>
+			<h2> Encontre os Delegacias especializadas mais proximas de você </h2>
 
-				<div id="delegaciasFrame" class="modal">
+			<div id="delegaciasFrame" class="modal">
 
-					<label> Insira aqui seu CEP:</label>
-					<input type="text" name="cep" id="meuCepDelegacias"> 
-					<button id="delegConfirm"> Confirmar </button>
+				<label> Insira aqui seu CEP:</label>
+				<input type="text" name="cep" id="meuCepDelegacias"> 
+				<button id="delegConfirm"> Confirmar </button>
 			
-					<ul id="lista-delegacias">	</ul>
-					
-				</div>
-			
+				<ul id="lista-delegacias">
+					<li> 
+						<ul> 
+							<li> Nome da Delegacia </li> 
+							<li> Endereço </li>
+							<li> Telefone </li>
+						</ul> 
+					</li>
+				</ul>
+			</div>
 		</div>
 
 <!-- ============================ -->
@@ -104,17 +112,17 @@
 	</section>
 
 	<footer>
-		Powered By Triforce
+		Powered By Camisa 10 - Hugo Barros - Jhonatan Rios
 	</footer>
 
 </body>
 <!--<script src="//code.responsivevoice.org/responsivevoice.js?key=l8WgW0uR"></script> -->
 	
- <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+<!-- <script src="https://code.responsivevoice.org/responsivevoice.js"></script> -->
 
 <script src='js/script.js'></script>
 <script src="js/cepHosp.js"></script>
-<script src='js/acessibilidade.js'></script>
+<!--  <script src='js/acessibilidade.js'></script> -->
 
 </html>
 
