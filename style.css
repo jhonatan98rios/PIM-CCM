@@ -246,6 +246,10 @@ footer{
 
 /* ========== Hospitais ========== */
 
+.destaque{
+	background-color: #BE7DFF;
+}
+
 #hospitais{
 	display: none;
 	width: 80%;
@@ -283,7 +287,6 @@ footer{
 #lista-hospitais{
 	width: 97%;
 	height: 85%;
-	background-color: #fff;
 	margin-top: 20px;
 	font-size: 18px;
 	border: 1px solid #000;
@@ -331,6 +334,7 @@ footer{
 	border-radius: 20px;
 	background-color: #fff;
 	filter: drop-shadow(1px 1px 10px #000);
+	/*overflow-y: scroll; */
 }
 
 #delegacias h2{
@@ -338,7 +342,7 @@ footer{
 	width: 80%;
 }
 
-#delegaciaslabel{
+#delegacias label{
 	margin: 10px;
 }
 
@@ -360,14 +364,13 @@ footer{
 
 #lista-delegacias{
 	width: 97%;
-	height: 85%;
+	height: 320px;
 	background-color: #fff;
 	margin-top: 20px;
 	font-size: 18px;
 	border: 1px solid #000;
 	border-top: none;
 	overflow-y: scroll;
-
 }
 
 #lista-delegacias li{

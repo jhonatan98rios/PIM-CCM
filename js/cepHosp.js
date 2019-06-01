@@ -158,11 +158,10 @@ function buscaCep(){
 					lastID.push(tatuape.idd);
 					break;
 				}
-				
 		}
 	}
 
-	document.getElementById('meuCep').value = '';
+	document.getElementById('meuCepHospitais').value = '';
 
 };
 
