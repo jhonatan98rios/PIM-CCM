@@ -46,6 +46,8 @@ function verifica(hosp){
 	//preventDefault(event);
 
 	let meuCep = document.getElementById('meuCepHospitais').value; //CEP do Cliente
+	console.log(meuCep);
+
 	let cep = meuCep.split('');
 
 	let point = 0;
