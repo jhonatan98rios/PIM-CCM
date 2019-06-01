@@ -1,14 +1,14 @@
 // Arrays armazenando os ceps de cada Hospital
 
-var domPedro = ('01017-010').split();
-var saude = ('04041-053').split();
-var jaguare = ('05339-002').split();
-var freguesia = ('02675-031').split();
-var tatuape = ('03069-070').split();
-var campoGrande = ('04675-050').split();
-var itaquera = ('08210-790').split();
-var marilia = ('03584-010').split();
-var pirituba = ('02945-000').split();
+var domPedro = ('01017-010').split('');
+var saude = ('04041-053').split('');
+var jaguare = ('05339-002').split('');
+var freguesia = ('02675-031').split('');
+var tatuape = ('03069-070').split('');
+var campoGrande = ('04675-050').split('');
+var itaquera = ('08210-790').split('');
+var marilia = ('03584-010').split('');
+var pirituba = ('02945-000').split('');
 
 // ======== Objetos ====================
 
@@ -95,13 +95,15 @@ function verifica(deleg){
 
 	let point = 0;
 
-	for(let i = 0; i<=9; i++){
+	for(let i = 0; i<=7; i++){
 		if(deleg[i] == cep[i]){
 			point ++;
 		}else{
 			i = 8;
 		}
 	}
+
+	console.log(deleg + ' : ' + point);
 
 	return point;
 }

@@ -330,7 +330,7 @@ footer{
 #delegacias{
 	display: none;
 	width: 80%;
-	height: 520px;
+	height: 600px;
 	border-radius: 20px;
 	background-color: #fff;
 	filter: drop-shadow(1px 1px 10px #000);
@@ -364,11 +364,11 @@ footer{
 
 #lista-delegacias{
 	width: 97%;
-	height: 320px;
+	height: 400px;
 	background-color: #fff;
 	margin-top: 20px;
 	font-size: 18px;
-	border: 1px solid #000;
+	border: 2px solid #000;
 	border-top: none;
 	overflow-y: scroll;
 }
