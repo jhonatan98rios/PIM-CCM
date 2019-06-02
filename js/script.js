@@ -33,7 +33,6 @@ $(document).ready(function(){
 
 			ativa = 'servicos';
 
-			$('#script_hosp').attr('src','js/cepDeleg.js');
 		};
 	};
 
@@ -53,6 +52,7 @@ $(document).ready(function(){
 		$('#hospitais').fadeIn();
 		$('.page-control').fadeIn();
 		$('#meuCepHospitais').focus();
+		disableAcess();
 		ativa = 'hospitais';
 				
 	};
@@ -64,10 +64,37 @@ $(document).ready(function(){
 		$('#delegacias').fadeIn();
 		$('.page-control').fadeIn();
 		$('#meuCepDelegacias').focus();
+		disableAcess();
 		ativa = 'delegacias';
 		
-		$('#script_hosp').attr('src','js/cepHosp.js');
 	};
+
+	$('meuCepHospitais').click(disableAcess);
+	$('meuCepDelegacias').click(disableAcess);
+
+	var activeAcess = true;
+
+	function disableAcess(){
+		$('#script_acess').remove();
+		$('#script_api').remove();
+		activeAcess = false;
+	}
+
+	$(document).keydown(function (e) {
+		if(e.keyCode == 48){
+			enableAcess();
+		}else if(e.keyCode == 13){
+			if(ativa == delegacias || ativa == hosptais){
+				enableAcess();
+			}
+		}
+	});
+
+	function enableAcess(){
+		$('#script').append('<script id="script_api" src="https://code.responsivevoice.org/responsivevoice.js"></script>');
+		$('#script').append('<script id="script_acess" src="js/acessibilidade.js"></script>');
+		activeAcess = true;
+	}
 
 	/*
 
@@ -83,7 +110,6 @@ $(document).ready(function(){
 	$('#script').append('<script id="script_api" src="https://code.responsivevoice.org/responsivevoice.js"></script>');
 	$('#script_api').remove();
 
-	
 
 	$(document).keydown(function (e) {
 		if(e.keyCode == 48){
@@ -94,6 +120,7 @@ $(document).ready(function(){
 			}
 		}
 	});
+
 	*/
 
 });
