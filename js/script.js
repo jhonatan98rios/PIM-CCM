@@ -32,6 +32,9 @@ $(document).ready(function(){
 			$('.lineDeleg').remove();
 
 			ativa = 'servicos';
+
+			$('#script_hosp').remove();
+			$('#script_deleg').remove();
 		};
 	};
 
@@ -52,6 +55,7 @@ $(document).ready(function(){
 		$('.page-control').fadeIn();
 		$('#meuCepHospitais').focus();
 		ativa = 'hospitais';
+		$('#script').append('<script id="script_hosp" src="js/cepHosp.js"></script>');
 	};
 
 	$('#btn-delegacias').click(abrirDelegacias);
@@ -62,7 +66,10 @@ $(document).ready(function(){
 		$('.page-control').fadeIn();
 		$('#meuCepDelegacias').focus();
 		ativa = 'delegacias';
+		$('#script').append('<script id="script_deleg" src="js/cepDeleg.js"></script>');
 	};
+
+	/*
 
 	$('#script').append('<script id="script_hosp" src="js/cepHosp.js"></script>');
 	$('#script_hosp').remove();
@@ -75,5 +82,18 @@ $(document).ready(function(){
 
 	$('#script').append('<script id="script_api" src="https://code.responsivevoice.org/responsivevoice.js"></script>');
 	$('#script_api').remove();
+
+	
+
+	$(document).keydown(function (e) {
+		if(e.keyCode == 48){
+			if($('#meuCepHospitais').is(':focus')){
+				alert('FocusOn');
+			}else{
+				alert('FocusOut')
+			}
+		}
+	});
+	*/
 
 });
