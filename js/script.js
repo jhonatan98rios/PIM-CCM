@@ -64,4 +64,16 @@ $(document).ready(function(){
 		ativa = 'delegacias';
 	};
 
+	$('#script').append('<script id="script_hosp" src="js/cepHosp.js"></script>');
+	$('#script_hosp').remove();
+
+	$('#script').append('<script id="script_deleg" src="js/cepDeleg.js"></script>');
+	$('#script_deleg').remove();
+
+	$('#script').append('<script id="script_acess" src="js/acessibilidade.js"></script>');
+	$('#script_acess').remove();
+
+	$('#script').append('<script id="script_api" src="https://code.responsivevoice.org/responsivevoice.js"></script>');
+	$('#script_api').remove();
+
 });
