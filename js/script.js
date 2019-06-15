@@ -104,6 +104,9 @@ $(document).ready(function(){
 
 			$("#back-page").css("background-color", "#000");
 
+			$("#lista-delegacias").css('font-weight','bolder');
+			$("#lista-hospitais").css('font-weight','bolder');
+
 			acessivel = true;
 
 		}else{

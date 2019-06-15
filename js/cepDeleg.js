@@ -115,14 +115,13 @@ $(document).ready(function(){
 
 		let line = 
 			`
-			<ul>
-				<li> ${delegacias.nome}</li>
-				<li> ${delegacias.endereco}</li>
-				<li> ${delegacias.telefone}</li>
-			</ul>`	
+				<td> ${delegacias.nome}</td>
+				<td> ${delegacias.endereco}</td>
+				<td> ${delegacias.telefone}</td>
+			`	
 		;
 
-		let listItem = document.createElement('li');
+		let listItem = document.createElement('tr');
 		listItem.setAttribute("class", "lineDeleg");
 
 		document.getElementById('lista-delegacias').appendChild(listItem).innerHTML = line;

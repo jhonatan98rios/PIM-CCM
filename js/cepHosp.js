@@ -69,15 +69,14 @@ $(document).ready(function(){
 	function newLine(hospital){
 
 		let line = 
-			`
-			<ul>
-				<li> ${hospital.nome}</li>
-				<li> ${hospital.endereco}</li>
-				<li> ${hospital.telefone}</li>
-			</ul>`	
+			`	
+				<td> ${hospital.nome}</td>
+				<td> ${hospital.endereco}</td>
+				<td> ${hospital.telefone}</td>
+			`	
 		;
 
-		let listItem = document.createElement('li');
+		let listItem = document.createElement('tr');
 		listItem.setAttribute("class", "lineHosp");
 
 		document.getElementById('lista-hospitais').appendChild(listItem).innerHTML = line;
