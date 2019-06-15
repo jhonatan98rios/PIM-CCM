@@ -131,15 +131,15 @@ $(document).ready(function(){
 
 	// ============= Organiza os valores e chama a função que adiciona as linhas ===============
 
-	document.getElementById('delegConfirm').addEventListener('click', buscaCep);
+	document.getElementById('delegConfirm').addEventListener('click', buscaCepDeleg);
 
-	$(document).keydown(function (e) {
+	$(document).keydown(function(e) {
 		if(e.keyCode == 13){
-			buscaCep();
+			buscaCepDeleg();
 		}
 	});
 
-	function buscaCep(){
+	function buscaCepDeleg(){
 
 		$('.lineDeleg').remove();
 

@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	var ativa = "inicio";
+	var acessivel = false;
 
 	$('#btn-serv, #inicio > h2').click(abrirServ);
 
@@ -52,7 +53,6 @@ $(document).ready(function(){
 		$('#hospitais').fadeIn();
 		$('.page-control').fadeIn();
 		$('#meuCepHospitais').focus();
-		disableAcess();
 		ativa = 'hospitais';
 				
 	};
@@ -64,63 +64,54 @@ $(document).ready(function(){
 		$('#delegacias').fadeIn();
 		$('.page-control').fadeIn();
 		$('#meuCepDelegacias').focus();
-		disableAcess();
 		ativa = 'delegacias';
 		
 	};
 
-	$('meuCepHospitais').click(disableAcess);
-	$('meuCepDelegacias').click(disableAcess);
+	function altoContraste(){
 
-	var activeAcess = true;
+		if(acessivel == false){
 
-	function disableAcess(){
-		$('#script_acess').remove();
-		$('#script_api').remove();
-		activeAcess = false;
-	}
+			$("header").css("background-image", "url('#')");
+			$("header").css("background-color", "#000");
 
-	$(document).keydown(function (e) {
-		if(e.keyCode == 48){
-			enableAcess();
-		}else if(e.keyCode == 13){
-			if(ativa == delegacias || ativa == hosptais){
-				enableAcess();
-			}
+			$("#fundo").css("background-image", "url('#')");
+			$("#fundo").css("background-color", "#000");
+
+			$("#inicio > h2").css("background-image", "url('#')");
+			$("#inicio > h2").css("background-color", "#000");
+
+			$("#btn-serv").css("background-image", "url('#')");
+			$("#btn-serv").css("background-color", "#000");
+
+			$("#btn-palestras").css("background-color", "#000");
+			$("#btn-hospitais").css("background-color", "#000");
+			$("#btn-delegacias").css("background-color", "#000");
+
+			$('#inicio > p').css('background-color', '#000');
+			$('#inicio').css('color', '#fff');
+
+			$('#hospitais').css('background-color', '#000');
+			$('#hospitais').css('color', '#fff');
+
+			$('#delegacias').css('background-color', '#000');
+			$('#delegacias').css('color', '#fff');
+
+			$("footer").css("background-image", "url('#')");	
+			$('footer').css('backgrund-color', '#000');
+
+			$("#servicos").css("color", "#fff");
+
+			$("#back-page").css("background-color", "#000");
+
+			acessivel = true;
+
+		}else{
+			location.reload();
 		}
-	});
 
-	function enableAcess(){
-		$('#script').append('<script id="script_api" src="https://code.responsivevoice.org/responsivevoice.js"></script>');
-		$('#script').append('<script id="script_acess" src="js/acessibilidade.js"></script>');
-		activeAcess = true;
-	}
+	};
 
-	/*
-
-	$('#script').append('<script id="script_hosp" src="js/cepHosp.js"></script>');
-	$('#script_hosp').remove();
-
-	$('#script').append('<script id="script_deleg" src="js/cepDeleg.js"></script>');
-	$('#script_deleg').remove();
-
-	$('#script').append('<script id="script_acess" src="js/acessibilidade.js"></script>');
-	$('#script_acess').remove();
-
-	$('#script').append('<script id="script_api" src="https://code.responsivevoice.org/responsivevoice.js"></script>');
-	$('#script_api').remove();
-
-
-	$(document).keydown(function (e) {
-		if(e.keyCode == 48){
-			if($('#meuCepHospitais').is(':focus')){
-				alert('FocusOn');
-			}else{
-				alert('FocusOut')
-			}
-		}
-	});
-
-	*/
+	$('#altoContraste').click(altoContraste);
 
 });

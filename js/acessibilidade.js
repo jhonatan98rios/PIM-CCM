@@ -1,51 +1,72 @@
+/*
 $(document).ready(function(){
 
+	var teclaVoltar = 107;
+	var teclaContraste = 109;
+
+	//107 = +
+	//109 = -
+*/
+
+	/* [NumPad 0] 96 [NumPad 1] 97 [NumPad 2] 98 [NumPad 3] 99 [NumPad 4] 100 [NumPad 5] 101 [NumPad 6] 102 [NumPad 7] 103 [NumPad 8] 104 [NumPad 9] 105 */
+
+
+/*
 	var ativa = 'inicio';
 	
-	var descricaoServicos = 'Pressione 1 para ver as Palestras agendadas! Pressione 2 para ver, qual o hospital especializado, mais próximo de você. Pressione 3 para ver, qual a delegacia especializada, mais próxima de você. Pressione 9 para acessar o modo de alto contraste. Pressione 0 para voltar';
+	var descricaoServicos = 'Pressione 1 para ver as Palestras agendadas! Pressione 2 para ver, qual o hospital especializado, mais próximo de você. Pressione 3 para ver, qual a delegacia especializada, mais próxima de você. Pressione menos para acessar o modo de alto contraste. Pressione mais para voltar';
 
 	$(document).keydown(function (e) {
 
 		if(ativa == 'inicio'){
 
-			if(e.keyCode == 105){
+//==================================================================================================================================================================================
+
+			if(e.keyCode == teclaContraste){
 				altoContraste();
-				console.log( 'OK' );
-				responsiveVoice.speak('Alto Contraste Ativado' + descricaoServicos, 'Brazilian Portuguese Male', {rate: 1.2});
+				responsiveVoice.speak('Alto Contraste Ativado. ' + descricaoServicos, 'Brazilian Portuguese Male', {rate: 1.2});
+			}
 
-			};
+			for(var i= 96; i<= 107; i++){
+
+				if(e.keyCode == i){
+					responsiveVoice.speak("Seja bem vinda à central de serviços do Centro de Cidadania das Mulheres." + descricaoServicos ,'Brazilian Portuguese Male', {rate: 1.2});
+					abrirServ();
+				}
+
+			}
+
+//==================================================================================================================================================================================
 			
-			responsiveVoice.speak("Seja bem vinda à central de serviços do Centro de Cidadania das Mulheres." + descricaoServicos ,'Brazilian Portuguese Male', {rate: 1.2});
-
-			abrirServ();		
-
 		}else
 
 		if(ativa == 'servicos'){
 			
-			if(e.keyCode == 96){
+			if(e.keyCode == teclaVoltar){
 				voltar();
 				responsiveVoice.speak('Precione qualquer tecla para ver os serviços!', 'Brazilian Portuguese Male', {rate: 1.2});
 			};
 
 			if(e.keyCode == 97){
 				abrirPalestra();
-				responsiveVoice.speak('Palestras: As palestras agendadas são: No momento não há palestras agendadas pois o sistema do Hugo ainda não foi inserido. Pressione 0 para voltar', 'Brazilian Portuguese Male',{rate: 1.2});
+				responsiveVoice.speak('Palestras: As palestras agendadas são: 1. - Título: Violência doméstica. Descrição: A Vida da mulher e a violência doméstica. Palestrante: Hugo Barros. Local: Unip Tatuapé. Data: 07/12/2019 às 18 horas. Pressione mais para voltar', 'Brazilian Portuguese Male',{rate: 1.2});
 			};
 
 			if(e.keyCode == 98){
 				abrirHospitais();
-				responsiveVoice.speak('Busca por hospitais: Insira seu CEP para saber quais são os hospitais especializados, mais proximos de você! Pressione 0 para voltar ', 'Brazilian Portuguese Male', {rate: 1.2});
+				responsiveVoice.speak('Busca por hospitais: Insira seu CEP para saber quais são os hospitais especializados, mais proximos de você! Pressiona Enter para confirmar! Pressione mais para voltar ', 'Brazilian Portuguese Male', {rate: 1.2});
 				document.getElementById('meuCepHospitais').focus();
+				setTimeout(function(){ document.getElementById('meuCepHospitais').value = ''; }, 100);
 			};
 
 			if(e.keyCode == 99){
 				abrirDelegacias();
-				responsiveVoice.speak('Busca por delegacias: Insira seu CEP para saber quais são as delegacias especializadas, mais proximas de você! Pressione 0 para voltar ', 'Brazilian Portuguese Male', {rate: 1.2});
+				responsiveVoice.speak('Busca por delegacias: Insira seu CEP para saber quais são as delegacias especializadas, mais proximas de você! Pressiona Enter para confirmar! Pressione mais para voltar ', 'Brazilian Portuguese Male', {rate: 1.2});
 				document.getElementById('meuCepDelegacias').focus();
+				setTimeout(function(){ document.getElementById('meuCepDelegacias').value = ''; }, 100);
 			};
 
-			if(e.keyCode == 105){
+			if(e.keyCode == teclaContraste){
 				altoContraste();
 				responsiveVoice.speak('Alto Contraste Ativado.' + descricaoServicos, 'Brazilian Portuguese Male', {rate: 1.2});
 			};
@@ -54,12 +75,12 @@ $(document).ready(function(){
 
 		if(ativa == 'palestras' || ativa == 'hospitais' || ativa == 'delegacias'){
 			
-			if(e.keyCode == 96){
+			if(e.keyCode == teclaVoltar){
 				voltar();
-				responsiveVoice.speak('Voltar. Pressione 1 para ver as Palestras agendadas! Pressione 2 para ver, qual o hospital especializado, mais próximo de você.	Pressione 3 para ver, qual a delegacia especializada, mais próxima de você.	Pressione 9 para acessar o modo de alto contraste. Pressione 0 para voltar!', 'Brazilian Portuguese Male', {rate: 1.2});
+				responsiveVoice.speak('Voltar. Pressione 1 para ver as Palestras agendadas! Pressione 2 para ver, qual o hospital especializado, mais próximo de você.	Pressione 3 para ver, qual a delegacia especializada, mais próxima de você.	Pressione menos para acessar o modo de alto contraste. Pressione mais para voltar!', 'Brazilian Portuguese Male', {rate: 1.2});
 			};
 
-			if(e.keyCode == 105){
+			if(e.keyCode == teclaContraste){
 				altoContraste();
 				responsiveVoice.speak('Alto Contraste Ativado', 'Brazilian Portuguese Male', {rate: 1.2});
 			};
@@ -108,6 +129,7 @@ $(document).ready(function(){
 		$('.page-control').fadeIn();
 		$('#meuCepHospitais').focus();
 		ativa = 'hospitais';
+		document.getElementById('meuCepHospitais').value = '';
 	};
 
 	function abrirDelegacias(){
@@ -116,6 +138,7 @@ $(document).ready(function(){
 		$('.page-control').fadeIn();
 		$('#meuCepDelegacias').focus();
 		ativa = 'delegacias';
+		document.getElementById('meuCepDelegacias').value = '';
 	};
 
 // ===================================================================
@@ -172,3 +195,5 @@ $(document).ready(function(){
 	$('#altoContraste').click(altoContraste);
 
 });
+
+*/

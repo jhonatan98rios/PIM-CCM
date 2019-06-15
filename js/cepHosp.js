@@ -86,15 +86,15 @@ $(document).ready(function(){
 
 	// ============= Organiza os valores e chama a função que adiciona as linhas ===============
 
-	document.getElementById('hospConfirm').addEventListener('click', buscaCep);
+	document.getElementById('hospConfirm').addEventListener('click', buscaCepHosp);
 
 	$(document).keydown(function (e) {
 		if(e.keyCode == 13){
-			buscaCep();
+			buscaCepHosp();
 		}
 	});
 
-	function buscaCep(){
+	function buscaCepHosp(){
 
 		$('.lineHosp').remove();
 
